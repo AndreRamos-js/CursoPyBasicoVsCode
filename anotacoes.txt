@@ -1,0 +1,165 @@
+------------------------------
+A função sep='' faz a separação no print de acordo com o que é colocado dentro das aspas.
+------------------------------
+------------------------------
+A função end='' insere algo no final do print de acordo com o que é colocado dentro das aspas.
+------------------------------
+------------------------------
+
+Para executar um print com alguma caracter que execute um comando, sem que esse comando seja executado, deve-se
+colocar r antes das apás.
+
+Exm:
+
+print(r'Esse é meu \n texto')
+------------------------------
+------------------------------
+1 - ( n + n )  Os parênteses têm a maior precedência, contas dentro deles são realizadas primeiro
+
+2 - **  Depois vem a exponenciação
+
+3 - * / //  %  Na sequência multiplicação, divisão, divisão inteira e módulo
+
+4 - +  -  Por fim, soma e subtração
+
+Contas com operadores de mesma precedência são realizadas da esquerda para a direita.
+------------------------------
+------------------------------
+Uma das formas de inserir as variaveis no print, é a formatação de string em f.
+
+Exemplo:
+
+nome = Fulano
+idade = 14
+
+print(f'{nome} tem {idade} anos de idade')
+------------------------------
+------------------------------
+Em programação, os termos "fazer cast" ou "type cast" referem-se à
+conversão de um tipo de valor em outro tipo de valor.
+------------------------------
+------------------------------
+Operadores de Funções:
+
+==	Igual a	Verifica se um valor é igual ao outro
+!=	Diferente de	Verifica se um valor é diferente ao outro
+>	Maior que	Verifica se um valor é maior que outro
+>=	Maior ou igual	Verifica se um valor é maior ou igual ao outro
+<	Menor que	Verifica se um valor é menor que outro
+<=	Menor ou igual	Verifica se um valor é menor ou igual ao outro
+
+Operadores de Definição:
+
+and	Retorna True se ambas as afirmações forem verdadeiras
+or	Retorna True se uma das afirmações for verdadeira
+not	retorna Falso se o resultado for verdadeiro
+
+Operadores de Associação:
+
+in	Retorna True caso o valor seja encontrado na sequência
+not in	Retorna True caso o valor não seja encontrado na sequência
+------------------------------
+------------------------------
+A função pass pode ser usada para ao chegar em determinado ponto do código ele não executar nada,
+pois irá ser colocado algum cód no local, porém, ainda não foi colocado.
+Uma forma de ter o mesmo resultado do pass é com ellipsis, desta maneira: ...
+------------------------------
+------------------------------
+A formatação de string do Python permite que possamos inserir caracteres no print.
+
+(CARACTERE) ( > ou < ou ^) (QUANTIDADE) (TIPO - s, d, ou f)
+
+Exemplo:
+
+nome = 'André'
+
+print(f'{nome:#^11'}
+
+Resultado:
+###André###
+------------------------------
+------------------------------
+É possível fazer fatiamento no print para buscar indices.
+
+Exemplo:
+
+texto = Python love
+
+print( texto[2])
+
+Resultado:
+t
+
+A contagem de indices começa a partir de 0, no exemplo, "P" é o indice 0, e o "y" o indice 1.
+------------------------------
+------------------------------
+É possível fazer fatiamento para buscar indices e exibir somente os mesmo.
+
+Exemplos:
+
+texto = 'Python love'
+
+nova_string = texto[2:6]
+
+Resultado:
+thon
+------------------------------
+------------------------------
+É possível fazer fatiamento para remover um indice do print.
+
+Exemplo:
+
+texto = 'Python love'
+
+print( texto[-1])
+
+Resultado:
+Python lov
+------------------------------
+------------------------------
+while é um laço infinito que repete um trecho do cód até que esse trecho não seja mais verdadeiro.
+
+Ex:
+
+x = 0
+while x < 5:
+print(x)
+x = x + 1
+print('Acabou!')
+Resultado:
+
+1
+
+2
+
+3
+
+4
+
+Acabou!
+------------------------------
+------------------------------
+A função continue para a execução de um laço a partir deste ponto, e pula para o próximo.
+------------------------------
+------------------------------
+Atalho: Ctrl + /
+Comenta tudo selecionado
+------------------------------
+------------------------------
+Função range recebe um start (de onde deve começar a contagem) um stop (onde deve parar) e um
+step (de quantos em quantos deve pular)
+------------------------------
+------------------------------
+A função .extend() extende a lista em questão com os dados de outra lista colocada entre parenteses.
+
+A função .append insere um elemento NO FINAL da lista selecionada.
+
+A função .insert( , ) insere um elemento na lista  selecionada, sendo colocados entre os parenteses,
+primeiro a posição em que o elemento inserido deve ficar e em seguida o elemento que deseja inserir.
+
+A função .pop deleta O ÚLTIMO elemento da lista selecionada.
+
+A função del( [:]) deleta elemento(os) da lista selecionada, sendo colocados entre os parenteses,
+primeiro a lista e em seguida o fatiamento de onde até onde deve ser deletado(os) o(s) elemento(s) da lista.
+------------------------------
+------------------------------
