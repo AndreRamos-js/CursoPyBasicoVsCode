@@ -1,19 +1,41 @@
 """
-enumerate - enumera iteráveis (índices)
+Faça uma lista de comprar com listas
+O usuário deve ter a possibilidade de
+inserir, apagar e listar valores da sua lista
+Não permita que o programa quebre com 
+erros de índices inexistentes na lista.
 """
-# [(0, 'Maria'), (1, 'Helena'), (2, 'Luiz'), (3, 'João')]
-lista = ['Maria', 'Helena', 'Luiz']
-lista.append('João')
+import os
 
-for indice, nome in enumerate(lista):
-    print(indice, nome, lista[indice])
+lista = []
 
-# for item in enumerate(lista):
-#     indice, nome = item
-#     print(indice, nome)
+while True:
+    print('Selecione uma opção')
+    opcao = input('[i]nserir [a]pagar [l]istar: ')
 
+    if opcao == 'i':
+        valor = input('Valor: ')
+        lista.append(valor)
+    elif opcao == 'a':
+        indice_str = input(
+            'Escolha o índice para apagar: '
+        )
 
-# for tupla_enumerada in enumerate(lista):
-#     print('FOR da tupla:')
-#     for valor in tupla_enumerada:
-#         print(f'\t{valor}')
+        try:
+            indice = int(indice_str)
+            del lista[indice]
+        except ValueError:
+            print('Por favor digite número int.')
+        except IndexError:
+            print('Índice não existe na lista')
+        except Exception:
+            print('Erro desconhecido')
+    elif opcao == 'l':
+
+        if len(lista) == 0:
+            print('Nada para listar')
+
+        for i, valor in enumerate(lista):
+            print(i, valor)
+    else:
+        print('Por favor, escolha i, a ou l.')
