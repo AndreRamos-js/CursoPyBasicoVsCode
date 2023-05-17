@@ -22,6 +22,22 @@ contrário disso:
     resultado é o valor da conta
 """
 
+# Fatia o numero do CPF para obter apenas os 9 primeiros digitos
 cpf = '74682489070'
 nove_digitos = cpf[:9]
-contador_regressivo = 10
+contador_regressivo_1 = 10
+
+# Converte o digito para int e faz uma conta multiplicando cada digito por 10 e depois soma todos os resultados
+resultado_1 = 0
+for digito_1 in nove_digitos:
+    resultado_1 += int(digito_1) * contador_regressivo_1
+    contador_regressivo_1 -=1
+
+''' Multiplica o resultado por 10 e pega o resto da divisão por 11.
+    O resultado será o primeiro digito do CPF, caso o resultado seja maior ou igual a 9 o número será 0.
+'''
+
+digito_1 = (resultado_1 * 10) % 11
+digito_1 = digito_1 if digito_1 <= 9 else 0
+
+print(digito_1)
