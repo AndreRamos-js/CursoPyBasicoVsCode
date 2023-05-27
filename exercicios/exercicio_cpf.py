@@ -23,7 +23,11 @@ contrário disso:
 """
 
 # Fatia o numero do CPF para obter apenas os 9 primeiros digitos
-cpf = '74682489070'
+cpf = '74682489070'\
+    .replace('.','')\
+    .replace(' ', '')\
+    .replace('-', '')
+
 nove_digitos = cpf[:9]
 contador_regressivo_1 = 10
 
@@ -61,6 +65,7 @@ print(digito_2)
 
 # Faz a validação do CPF
 cpf_valido = f'{nove_digitos}{digito_1}{digito_2}'
+
 
 if cpf == cpf_valido:
     print(f'{cpf} é válido!')
